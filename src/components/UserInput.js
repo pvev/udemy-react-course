@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class UserInput extends Component {
-  render() {
-    return (
-      <div>
-        <p>{this.props.username}</p>
-        <input type="text" onChange={this.props.changeUser}/>
-      </div>
-    )
-  }
+const UserInput = (props) => {
+  return (
+    <div>
+      <p>{props.username}</p>
+      <input type="text" onChange={props.changeUser}/>
+    </div>
+  );
 }
-
 export default UserInput;
