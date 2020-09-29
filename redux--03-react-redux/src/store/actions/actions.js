@@ -25,6 +25,12 @@ export const deleteCounter = (val) => {
   return { type: DELETE_COUNTER, id: val };
 };
 
-export const storeCounter = () => {
+export const storeCounterSyn = () => {
   return { type: STORE_COUNTER };
+};
+
+export const storeCounter = () => {
+  return (dispatch) => {
+    setTimeout(() => dispatch(storeCounterSyn()), 3000);
+  };
 };
